@@ -2,7 +2,7 @@
 
 **YukiFlix, c'est quoi ?**
 
-*YukiFlix est un site de streaming gratuit qui propose des films et des séries d'animés en haute qualité, sans publicités ni inscription requise. Les utilisateurs peuvent profiter de tout le contenu disponible sur le site sans avoir à subir des publicités ennuyeuses ou à s'inscrire à un compte.*
+*YukiFlix est un site de streaming gratuit fondé par Honekichi qui propose des films et des séries d'animés en haute qualité, sans publicités ni inscription requise. Cela signifie que les utilisateurs peuvent profiter de tout le contenu disponible sur le site sans avoir à subir des publicités ennuyeuses ou à s'inscrire à un compte.*
 
 **Diversité**
 
