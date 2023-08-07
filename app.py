@@ -34,7 +34,7 @@ _B = "_"
 _A = "data.json"
 
 app = Flask(__name__)
-app.secret_key = key
+app.secret_key = "2043a6921650c67f05bfabbef3007eea08d1d8778cc9d084"
 year = datetime.datetime.now().year
 
 ROLE_ID = "1041103551751004161"
