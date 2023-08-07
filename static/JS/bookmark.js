@@ -1,0 +1,1 @@
+const bookmarkButton = document.querySelector('.bookmark'); bookmarkButton.addEventListener('click', function () { const icon = bookmarkButton.querySelector('ion-icon'); const isActive = bookmarkButton.classList.toggle('active'); if (isActive) { icon.setAttribute('name', 'bookmark'); } else { icon.setAttribute('name', 'bookmark-outline'); } });
