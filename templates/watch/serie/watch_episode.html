@@ -1,0 +1,34 @@
+{% include 'menu.html' %}<title>YukiFlix | {{name}}</title>
+<div class="container">
+    <main>
+        <section class="banner">
+            <div class="banner-card"><img
+                     src="{{ url_for('static', filename='img/' ~ data['series'][name]['seasons'][saison]['image_H']) }}"
+                     class="banner-img"></div>
+        </section>
+        <section class="movies">
+            <div class="filter-bar movie"><a href="">
+                    <h2 class="titre">{{ name }}: S{{ saison }} - E{{ episode }}</h2>
+                </a></div>
+            <div class="navigation">{% if int(episode) > 1 %}<a
+                   href="{{ url_for('watch_episode', name=name, saison=saison, episode=str(int(episode)-1)) }}"
+                   class="btn btn-primary">←E</a>{% endif %}{% if int(episode) <
+                  len(data['series'][name]['seasons'][saison]['episodes']) %}<a
+                  href="{{ url_for('watch_episode', name=name, saison=saison, episode=str(int(episode)+1)) }}"
+                  class="btn btn-primary">E→</a>{% endif %}{% if int(saison) > 1 %}<a
+                       href="{{ url_for('watch_episode', name=name, saison=str(int(saison)-1), episode=1) }}"
+                       class="btn btn-primary">←S</a>{% endif %}{% if int(saison) < len(data['series'][name]['seasons'])
+                      %}<a href="{{ url_for('watch_episode', name=name, saison=str(int(saison)+1), episode=1) }}"
+                      class="btn btn-primary">S→</a>{% endif %}</div>{% set episode_data =
+            data['series'][name]['seasons'][saison]['episodes'][episode] %}<div class="video"><iframe id="video-player"
+                        src="{{ episode_data['link_fr'] }}" allowfullscreen autoplay></iframe></div>
+            <div class="video-select">
+                <div class="video-buttons"><button onclick="playVideo('{{ episode_data['link_fr'] }}')" id="active"
+                            video-src="{{ episode_data['link_fr'] }}">VF</button><button
+                            onclick="playVideo('{{ episode_data['link_vostfr'] }}')"
+                            video-src="{{ episode_data['link_vostfr'] }}">VOSTFR</button></div>
+            </div>
+            <p class="synopsis">{{ data['series'][name]['seasons'][saison]['description'] }}</p>
+        </section>
+    </main>
+</div>{% include 'footer.html' %}

@@ -1,0 +1,54 @@
+{% include 'menu.html' %}
+
+  <!--
+    - main container
+  -->
+  <div class="container">
+    <!--
+      - MAIN SECTION
+    -->
+    <main>
+      <!--
+        - #BANNER SECTION
+      -->
+      <section class="banner">
+        <div class="banner-card">
+          <img src="{{ url_for('static', filename='img/' ~ data['series'][name]['seasons'][saison]['image_H']) }}" class="banner-img">
+        </div>
+      </section>
+      <!--
+        - #EPISODE SECTION
+      -->
+      <section class="episode">
+        <!--
+          - filter bar
+        -->
+        <div class="filter-bar episode">
+          <h2 class="titre">{{ name }}: Saison {{ saison }} - Épisode {{ episode }}</h2>
+          <div class="stars">
+            {% set stars = data['series'][name]['seasons'][saison]['star'] %}
+            {% for i in range(stars) %}
+              <i class="fas fa-star"></i>
+            {% endfor %}
+          </div>
+        </div>
+        {% set episode_data = data['series'][name]['seasons'][saison]['episodes'][episode] %}
+        {% if episode_data['link_fr'] %}
+        <p>VF:</p>
+        <div class="video">
+          <iframe src="{{ episode_data['link_fr'] }}" allowfullscreen autoplay></iframe>
+        </div>
+        
+        {% endif %}
+        {% if episode_data['link_vostfr'] %}
+        <p>VOSTFR:</p>
+        <div class="video">
+          <iframe src="{{ episode_data['link_vostfr'] }}" allowfullscreen autoplay></iframe>
+        </div>
+        {% endif %}
+        <p class="synopsis">{{ episode_data['description'] }}</p>
+      </section>
+    </main>
+  </div>
+
+    {% include 'footer.html' %}

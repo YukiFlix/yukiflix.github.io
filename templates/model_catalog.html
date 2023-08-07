@@ -1,0 +1,94 @@
+<main>
+    <section class="banner">
+        <div class="banner-card">
+            <img src="https://i.ibb.co/71BbqLL/banniere.webp" class="banner-img" alt="Banner Image" />
+        </div>
+    </section>
+    <section class="movies">
+        <div class="travel">
+            <div class="visits"><span>Visites: {{nb_visit}}</span></div>
+            <select class="options" onchange="window.location.href=this.value" title="options">
+                <option value="" disabled="disabled" selected="selected">
+                    Choisir
+                </option>
+                <option value="#series">Séries</option>
+                <option value="#films">Films</option>
+            </select>
+        </div>
+        <div class="filter-bar" id="series">
+            <h2 class="titre">Séries</h2>
+            <div class="filter-options">
+                <input type="radio" id="default-series" name="filter-series" value="default" checked />
+                <label for="default-series">Défaut</label>
+
+                <input type="radio" id="rating-series" name="filter-series" value="rating" />
+                <label for="rating-series">Note</label>
+
+                <input type="radio" id="alphabetical-series" name="filter-series" value="alphabetical" />
+                <label for="alphabetical-series">Alphabétique</label>
+
+                <div class="checked"></div>
+            </div>
+
+        </div>
+        <div class="animes-grid" id="animes-grid-series">
+            {% for serie, serie_data in data.series.items() %}
+            <div class="movie-card" title="{{ serie }}">
+                <a href="{{ serie_data.root }}">
+                    <div class="card-head" title="{{ serie }}">
+                        <img src="{{ url_for('static', filename='img/' ~ serie_data.image_V) }}" class="card-img"
+                             alt="{{ serie }}" />
+                        <div class="rating" data-star="{{ serie_data['stars'] }}">
+                            <ion-icon name="star"></ion-icon><span>{{ serie_data["stars"] }}</span>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="play"><ion-icon name="play-circle"></ion-icon></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{ serie }}</h3>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="movies" id="section2">
+        <div class="filter-bar" id="films">
+            <h2 class="titre">Films</h2>
+            <div class="filter-options">
+                <input type="radio" id="default-films" name="filter-films" value="default" checked />
+                <label for="default-films">Défaut</label>
+
+                <input type="radio" id="rating-films" name="filter-films" value="rating" />
+                <label for="rating-films">Note</label>
+
+                <input type="radio" id="alphabetical-films" name="filter-films" value="alphabetical" />
+                <label for="alphabetical-films">Alphabétique</label>
+
+                <div class="checked"></div>
+            </div>
+        </div>
+        <div class="animes-grid" id="animes-grid-films">
+            {% for movie in data["movies"] %}
+            <div class="movie-card" title="{{ movie }}">
+                <a href='{{ data["movies"][movie]["root"] }}'>
+                    <div class="card-head" title="{{ movie }}">
+                        <img src="{{ url_for('static', filename='img/' ~ data['movies'][movie]['image_V']) }}"
+                             class="card-img" alt="{{ movie }}" />
+                        <div class="rating" data-star="{{ data['movies'][movie]['star'] }}">
+                            <ion-icon name="star"></ion-icon><span>{{ data["movies"][movie]["star"] }}</span>
+                        </div>
+                        <div class="card-overlay">
+                            <div class="play"><ion-icon name="play-circle"></ion-icon></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{ movie }}</h3>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
