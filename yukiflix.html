@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Redirection vers YukiFlix</title>
+  <title>Redirection vers YukiFlix avec slash</title>
 </head>
 <body>
 
 <script>
-  // Redirection vers le site web spécifié après le chargement de la page
-  window.location.href = 'https://yukiflix.pythonanywhere.com/';
+  // Vérifie si l'URL ne se termine pas par un slash
+  if (!window.location.pathname.endsWith('/')) {
+    // Redirige vers l'URL avec un slash à la fin
+    window.location.replace(window.location.href + '/');
+  }
 </script>
 
 </body>
