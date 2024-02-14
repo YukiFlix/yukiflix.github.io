@@ -33,13 +33,13 @@ suffisant n'est-ce pas ?
 
 ## Contributions
 
-Nous accueillons les contributions de la communauté ! Si vous souhaitez contribuer à l'amélioration de YukiFlix, n'hésitez pas à nous conacter sur notre serveur discord !
+Nous accueillons les contributions de la communauté ! Si vous souhaitez contribuer à l'amélioration de YukiFlix, n'hésitez pas à nous contacter sur notre serveur discord !
 [Discord](https://dsc.gg/yukiflix)
 
 
 ## Contact
 
-Pour toute question, suggestion ou problème, veuillez nous contacter à [yukiflixoff@gmail.com](mailto:yukiflixoff@gmail.com).
+Pour toute question, suggestion ou problème, veuillez nous contacter à [yukiflixoff@gmail.com](mailto:yukiflixoff@gmail.com) ou dans notre serveur discord.
 
 Nous vous remercions de votre soutien et nous espérons que vous apprécierez votre expérience sur YukiFlix !
 
