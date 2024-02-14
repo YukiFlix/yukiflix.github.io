@@ -25,12 +25,15 @@ YukiFlix est une plateforme de streaming d'anime qui propose une vaste sélectio
 ## Captures d'écran
 
 ![image](https://github.com/YukiFlix/yukiflix.github.io/assets/115656718/f7f87ebd-9ff9-4557-b39e-712069f4aece)
+
 *affichage d'animés en premier sur la page d'accueil*
 
 ![image](https://github.com/YukiFlix/yukiflix.github.io/assets/115656718/01feec11-96dd-4edc-937f-32255ee3c15d)
+
 *affichage section animés sur la page d'accueil*
 
 ![image](https://github.com/YukiFlix/yukiflix.github.io/assets/115656718/4861c350-25d7-4849-9426-19470be5fa27)
+
 *page de connexion*
 
 
