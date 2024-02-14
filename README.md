@@ -27,6 +27,7 @@ YukiFlix est une plateforme de streaming d'anime qui propose une vaste sélectio
 ![image](https://github.com/YukiFlix/yukiflix.github.io/assets/115656718/f7f87ebd-9ff9-4557-b39e-712069f4aece)
 
 *affichage d'animés en premier sur la page d'accueil*
+
 suffisant n'est-ce pas ?
 
 
