@@ -1,4 +1,4 @@
-# YukiFlix
+# <span style="background-image: linear-gradient(to right, #ff6e7f, #bfe9ff); -webkit-background-clip: text; color: transparent; font-weight: bold;">YukiFlix</span>
 
 Bienvenue sur YukiFlix, votre source de streaming d'anime gratuite et sans publicité !
 
